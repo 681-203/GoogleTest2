@@ -11,7 +11,32 @@ import FirebaseFirestore
 
 class MyPageViewController: UIViewController {
     
+    @IBOutlet var dataTableView: UITableView!
+    
     var db = Firestore.firestore()
+    
+    private func fetchPosts() {
+        if search == "" {
+            fetchChat{[weak self] (posts, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let posts = posts {
+                    self?.posts = posts
+                    self?.HyoujiTableView.reloadData()
+                }
+            }
+        } else {
+            fetchFilterChat{[weak self] (posts, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let posts = posts {
+                    self?.posts = posts
+                    self?.HyoujiTableView.reloadData()
+                }
+            }
+        }
+        
+    }
     
     func fetchChat(completion: @escaping ([One]?, Error?) -> Void) {
         self.db = Firestore.firestore()

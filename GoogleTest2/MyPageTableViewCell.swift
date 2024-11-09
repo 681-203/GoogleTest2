@@ -13,6 +13,8 @@ class MyPageTableViewCell: UITableViewCell {
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var userPhotoImageView: UIImageView!
     @IBOutlet  private weak var professionLabel: UILabel!
+    @IBOutlet var replyTableView: UITableView!
+    
     var cellId: String!
     var professional: String!
     

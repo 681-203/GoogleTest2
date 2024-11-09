@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wk-2E-6vW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="-624"/>
+            <point key="canvasLocation" x="2066" y="-657"/>
         </scene>
         <!--Reply View Controller-->
         <scene sceneID="6x0-nv-9xy">
@@ -754,6 +754,7 @@
                                             <outlet property="contentLabel" destination="2ag-Ve-l91" id="SmS-om-hKx"/>
                                             <outlet property="nameLabel" destination="R0f-xR-nKs" id="hIF-wi-5I6"/>
                                             <outlet property="professionLabel" destination="FwX-IT-jVe" id="Xov-F6-Juw"/>
+                                            <outlet property="replyTableView" destination="xm0-6P-L8T" id="9HI-am-HRN"/>
                                             <outlet property="userPhotoImageView" destination="Gjr-S9-S7o" id="O29-I3-7K2"/>
                                         </connections>
                                     </tableViewCell>
@@ -772,6 +773,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="マイページ" image="house" catalog="system" id="u13-0y-GTf"/>
+                    <connections>
+                        <outlet property="dataTableView" destination="86X-eV-swG" id="0g5-SQ-JZ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy6-Qy-sgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
